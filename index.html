@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Explorer - Pedro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎮 Game Explorer</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar videojuego...">
+      <button id="searchBtn">Buscar</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="games-container" class="grid"></div>
+    <div id="game-detail" class="hidden"></div>
+
+    <div id="pagination" class="pagination">
+    <button id="prevBtn">Anterior</button>
+    <span id="pageNumber">Página 1</span>
+    <button id="nextBtn">Siguiente</button>
+    
+  </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
