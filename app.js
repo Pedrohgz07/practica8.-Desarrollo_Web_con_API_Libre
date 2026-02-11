@@ -26,9 +26,18 @@ let url = `${BASE_URL}/games?key=${API_KEY}&page_size=12&page=${page}`;
   const response = await fetch(url);
   const data = await response.json();
 
-  displayGames(data.results);
-  pageNumber.textContent = `Página ${page}`;
- urrentPage = page;
+  if (!data.results || data.results.length === 0) {
+  gamesContainer.innerHTML = "No se encontraron resultados.";
+  return;
+}
+
+displayGames(data.results);
+
+
+
+ pageNumber.textContent = `Página ${page}`;
+ currentPage = page;
+
 }
 
 function displayGames(games) {
