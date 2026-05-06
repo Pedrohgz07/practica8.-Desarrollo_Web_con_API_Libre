@@ -1,12 +1,9 @@
 const API_KEY = "bf29ba6ee5ab47f0ae29c51de11348e5";
 const BASE_URL = "https://api.rawg.io/api";
-
 const gamesContainer = document.getElementById("games-container");
 const gameDetail = document.getElementById("game-detail");
 const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchInput");
-
-
 const pageNumber = document.getElementById("pageNumber");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -32,8 +29,6 @@ let url = `${BASE_URL}/games?key=${API_KEY}&page_size=12&page=${page}`;
 }
 
 displayGames(data.results);
-
-
 
  pageNumber.textContent = `Página ${page}`;
  currentPage = page;
@@ -85,7 +80,6 @@ function goBack() {
 searchBtn.addEventListener("click", () => {
   fetchGames(searchInput.value);
 });
-
 
 nextBtn.addEventListener("click", () => {
   fetchGames(searchInput.value, currentPage + 1);
