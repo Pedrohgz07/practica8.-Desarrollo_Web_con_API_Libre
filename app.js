@@ -30,8 +30,6 @@ let url = `${BASE_URL}/games?key=${API_KEY}&page_size=12&page=${page}`;
 
 displayGames(data.results);
 
-
-
  pageNumber.textContent = `Página ${page}`;
  currentPage = page;
 
@@ -82,7 +80,6 @@ function goBack() {
 searchBtn.addEventListener("click", () => {
   fetchGames(searchInput.value);
 });
-
 
 nextBtn.addEventListener("click", () => {
   fetchGames(searchInput.value, currentPage + 1);
